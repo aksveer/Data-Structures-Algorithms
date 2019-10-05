@@ -5,6 +5,10 @@ public class linkedList {
 	public void addAtStart(int data) {
 		Node newNode = new Node(data);
 		newNode.setNext(this.head);
+		if(this.head != null) {
+			this.head.setPrevious(newNode);
+		}
+		
 		this.head = newNode;
 	}
 	
